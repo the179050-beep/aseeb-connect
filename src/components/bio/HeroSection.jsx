@@ -7,27 +7,6 @@ export default function HeroSection() {
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-72 h-72 rounded-full blur-3xl animate-glow"
         style={{ background: "radial-gradient(circle, hsla(36,55%,52%,0.12) 0%, transparent 70%)" }} />
 
-      {/* Logo ring */}
-      <motion.div
-        initial={{ opacity: 0, scale: 0.85 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.65, ease: "easeOut" }}
-        className="relative z-10 mb-5"
-      >
-        {/* outer decorative ring */}
-        <div className="absolute inset-0 rounded-full border border-primary/20 scale-110 animate-glow" />
-        <div className="w-28 h-28 rounded-full border border-primary/35 flex items-center justify-center bg-card/70 backdrop-blur-sm shadow-xl"
-          style={{ boxShadow: "0 0 40px hsla(36,55%,52%,0.15)" }}>
-          <img
-            src="https://aseeb.com.sa/images/logo.svg"
-            alt="شعار عسيب"
-            className="w-20 h-20 object-contain"
-            width={80}
-            height={80}
-          />
-        </div>
-      </motion.div>
-
       {/* Brand name */}
       <motion.h1
         initial={{ opacity: 0, y: 10 }}
