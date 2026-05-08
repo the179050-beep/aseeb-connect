@@ -7,9 +7,18 @@ export default function FooterNav() {
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ delay: 1.2, duration: 0.5 }}
+      transition={{ delay: 1.1, duration: 0.5 }}
       className="flex flex-col items-center gap-4 mt-10 mb-8 px-4"
     >
+      {/* Divider */}
+      <div className="flex items-center gap-3 w-full max-w-xs">
+        <div className="flex-1 h-px bg-border/40" />
+        <svg className="w-3 h-3 opacity-25" viewBox="0 0 24 24" fill="hsl(36,55%,52%)">
+          <polygon points="12,3 21,21 3,21" />
+        </svg>
+        <div className="flex-1 h-px bg-border/40" />
+      </div>
+
       <div className="flex items-center gap-6">
         <Link
           to="/privacy"
@@ -28,7 +37,7 @@ export default function FooterNav() {
         </Link>
       </div>
 
-      <p className="text-[11px] text-muted-foreground/60">
+      <p className="text-[11px] text-muted-foreground/50 tracking-wide">
         © {new Date().getFullYear()} عسيب — جميع الحقوق محفوظة
       </p>
     </motion.div>

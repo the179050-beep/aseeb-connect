@@ -2,18 +2,22 @@ import { motion } from "framer-motion";
 
 export default function HeroSection() {
   return (
-    <div className="relative flex flex-col items-center pt-12 pb-8 px-4">
-      {/* Decorative glow */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-64 h-64 bg-primary/10 rounded-full blur-3xl animate-glow" />
-      
-      {/* Logo */}
+    <div className="relative flex flex-col items-center pt-14 pb-8 px-4">
+      {/* Background glow */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-72 h-72 rounded-full blur-3xl animate-glow"
+        style={{ background: "radial-gradient(circle, hsla(36,55%,52%,0.12) 0%, transparent 70%)" }} />
+
+      {/* Logo ring */}
       <motion.div
-        initial={{ opacity: 0, scale: 0.8 }}
+        initial={{ opacity: 0, scale: 0.85 }}
         animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.6, ease: "easeOut" }}
-        className="relative z-10 mb-6"
+        transition={{ duration: 0.65, ease: "easeOut" }}
+        className="relative z-10 mb-5"
       >
-        <div className="w-28 h-28 rounded-full border-2 border-primary/40 flex items-center justify-center bg-card/80 backdrop-blur-sm shadow-lg shadow-primary/10">
+        {/* outer decorative ring */}
+        <div className="absolute inset-0 rounded-full border border-primary/20 scale-110 animate-glow" />
+        <div className="w-28 h-28 rounded-full border border-primary/35 flex items-center justify-center bg-card/70 backdrop-blur-sm shadow-xl"
+          style={{ boxShadow: "0 0 40px hsla(36,55%,52%,0.15)" }}>
           <img
             src="https://aseeb.com.sa/images/logo.svg"
             alt="شعار عسيب"
@@ -24,29 +28,44 @@ export default function HeroSection() {
         </div>
       </motion.div>
 
-      {/* Brand Name */}
+      {/* Brand name */}
       <motion.h1
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.2, duration: 0.5 }}
-        className="text-3xl font-bold text-foreground mb-1 tracking-wide"
+        className="text-4xl font-black text-foreground mb-0.5 tracking-widest"
+        style={{ fontFamily: "var(--font-tajawal)" }}
       >
         عسيب
       </motion.h1>
 
+      {/* Subtitle EN */}
       <motion.p
-        initial={{ opacity: 0, y: 10 }}
+        initial={{ opacity: 0, y: 8 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.3, duration: 0.5 }}
-        className="text-primary font-medium text-sm mb-1"
+        transition={{ delay: 0.3, duration: 0.45 }}
+        className="text-primary font-semibold text-xs tracking-[0.18em] uppercase mb-3"
       >
         Najdi Restaurant
       </motion.p>
 
-      <motion.p
-        initial={{ opacity: 0, y: 10 }}
-        animate={{ opacity: 1, y: 0 }}
+      {/* Divider */}
+      <motion.div
+        initial={{ scaleX: 0 }}
+        animate={{ scaleX: 1 }}
         transition={{ delay: 0.4, duration: 0.5 }}
+        className="flex items-center gap-2 mb-3"
+      >
+        <div className="w-8 h-px bg-primary/40" />
+        <div className="w-1.5 h-1.5 rounded-full bg-primary/60" />
+        <div className="w-8 h-px bg-primary/40" />
+      </motion.div>
+
+      {/* Tagline */}
+      <motion.p
+        initial={{ opacity: 0, y: 8 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.45, duration: 0.45 }}
         className="text-muted-foreground text-sm text-center max-w-xs leading-relaxed"
       >
         التجربة النجدية الأصيلة — أطباق تراثية بلمسة عصرية
