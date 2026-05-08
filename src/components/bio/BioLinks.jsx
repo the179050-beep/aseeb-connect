@@ -2,10 +2,10 @@ import { Globe, MapPin, Instagram, UtensilsCrossed, CalendarDays } from "lucide-
 import BioLink from "./BioLink";
 
 const links = [
-  { icon: Globe, label: "الموقع الرسمي", href: "https://aseeb.com.sa/" },
-  { icon: UtensilsCrossed, label: "قائمة الطعام", href: "https://aseeb.com.sa/menu" },
-  { icon: CalendarDays, label: "فرع الياسمين", href: "https://aseeb.com.sa/" },
-  { icon: CalendarDays, label: "فرع الدرعية", href: "https://aseeb.com.sa/" },
+  { icon: Globe, label: "الموقع الرسمي", href: "https://app.sawsbs.com/" },
+  { icon: UtensilsCrossed, label: "قائمة الطعام", href: "https://app.sawsbs.com/menu" },
+  { icon: CalendarDays, label: "فرع الياسمين", href: "https://app.sawsbs.com/" },
+  { icon: CalendarDays, label: "فرع الدرعية", href: "https://app.sawsbs.com/" },
 
   { icon: Instagram, label: "انستقرام", href: "https://www.instagram.com/aseeb_sa/" },
   { icon: MapPin, label: "موقعنا على الخريطة", href: "https://maps.google.com/?q=aseeb+restaurant+riyadh" },
